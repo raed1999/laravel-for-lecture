@@ -1,0 +1,22 @@
+
+ROUTES
+    - return simple view (blade file) @done
+    - returns strings , JSON data @done
+    - returns view with parameter @done
+    - returns view with optional parameter @done
+    - returns view and JSON, manipulate in blade @done
+    - creating a dynamic route (name) @done
+    - constraint routes param (single and multiple params) @done
+        -regex (where) ['param','regex'] @done
+        -helper methods (whereAlpha, whereNumeric, whereAlphaNumeric) @done
+
+CONTROLLER
+    Convert exisiting code and use controllers
+    -- resources controller
+    Use Response and Request
+    -- return redirect
+        ->route('location')
+        withInput
+
+
+
