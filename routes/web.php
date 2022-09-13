@@ -16,28 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-//Normal route without controller
-/* Route::get('/index',function(){
-    return view('index',['num1' => $num1]);
-}); */
-
-//index -> function
-
-//Normal route without controller
-/* Route::get('/index',[IndexController::class,'index']); */
-
-//Controller na may params
-Route::get('/add{num1}{num2}',[IndexController::class,'addTwoNumbers']);
+ Route::resource('add',IndexController::class); // handles the functions inside the controller
 
 
 
-Route::resource('/profiles', ProfileController::class);
-Route::resource('/home', TimeConversionController::class);
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-
+/* Route::get('/add/{num1}/{num2}',[IndexController::class,'addTwoNumbers']); //return a view with a sum variable
+ */
 
