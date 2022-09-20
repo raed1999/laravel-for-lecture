@@ -16,11 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::resource('add',IndexController::class); // handles the functions inside the controller
+ Route::resource('add',IndexController::class);
 
+ Route::get('/valid',function(){
+    return view('valid');
+ })->name('validVoter');
 
+ Route::get('/invalid',function(){
+    return view('invalid');
+ })->name('invalidVoter');
 
+/*  Route::get('/',[IndexController::class,'index']); */
 
-/* Route::get('/add/{num1}/{num2}',[IndexController::class,'addTwoNumbers']); //return a view with a sum variable
- */
-
+ /* Middleware */
+ Route::get('/{age}',function($age){
+    return view('index');
+ })->middleware('age.valid:age');
